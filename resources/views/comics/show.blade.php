@@ -13,7 +13,11 @@
         <div class="row g-4">
             <div class="col-8">
                 <h2>{{ $comic->title }}</h2>
-                <p>{{ $comic->description }} <br><br> {{ $comic->price }}£</p>
+                <h5>{{ $comic->series }}</h5>
+                <p>{{ $comic->description }}</p>
+                <p>TYPE: {{ $comic->type }}</p>
+                <h4>{{ $comic->price }}£</h4>
+                <p>SALE DATE: {{ $comic->sale_date }}</p>
             </div>
         </div>
     </div>
