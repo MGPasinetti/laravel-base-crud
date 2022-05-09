@@ -10,8 +10,8 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
+    <div class="container p-5">
+        {{-- <div class="row">
             <div class="col">
                 <table class="table table-dark table-hover">
                     <thead>
@@ -40,7 +40,22 @@
                     </tbody>
                 </table>
             </div>
+        </div> --}}
+
+        <div class="row g-4">
+            @foreach ($comics as $comic)
+                <div class="col-4">
+                    <div class="card h-100">
+                        <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                        <div class="card-body">
+                            <h2 class="card-title"><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></h2>
+                            <p class="card-text">{{ $comic->description }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
+
 </body>
 </html>
