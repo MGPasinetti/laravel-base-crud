@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Faker\Provider\Lorem;
 use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
@@ -16,3 +17,4 @@ class Comic extends Model
         'type',
     ];
 }
+

@@ -48,8 +48,8 @@
                     <div class="card h-100">
                         <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                         <div class="card-body">
-                            <h2 class="card-title"><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></h2>
-                            <p class="card-text">{{ $comic->description }}</p>
+                            <h2 class="card-title mb-4"><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></h2>
+                            <p class="card-text overflow-scroll" style="height: 15rem"><strong>DESCRIPTION:</strong><br> {{ $comic->description }}</p>
                         </div>
                     </div>
                 </div>
