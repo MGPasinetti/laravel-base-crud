@@ -20,6 +20,7 @@
                 <p>SALE DATE: {{ $comic->sale_date }}</p>
             </div>
         </div>
+        <a href="{{ url()->previous() }}">Back</a>
     </div>
 </body>
 </html>

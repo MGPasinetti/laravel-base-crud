@@ -11,7 +11,7 @@
 <body>
 
     <div class="container p-5">
-        {{-- <div class="row">
+        <div class="row">
             <div class="col">
                 <table class="table table-dark table-hover">
                     <thead>
@@ -23,6 +23,8 @@
                             <th scope="col">Series</th>
                             <th scope="col">Sale_Date</th>
                             <th scope="col">Type</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,12 +37,22 @@
                                 <td>{{ $comic->series }}</td>
                                 <td>{{ $comic->sale_date }}</td>
                                 <td>{{ $comic->type }}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
+                                </td>
+                                <td>
+                                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
-        </div> --}}
+        </div>
 
         <div class="row g-4">
             @foreach ($comics as $comic)

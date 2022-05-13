@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <h1>{{ $comic->title }}</h1>
     <div class="container">
+        <h1>{{ $comic->title }}</h1>
         <div class="row">
             <div class="col">
                 @if ($errors->any())
