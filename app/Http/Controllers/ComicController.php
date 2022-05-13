@@ -78,6 +78,7 @@ class ComicController extends Controller
         $this->validationRules = [
             'title' => 'required|min:5|max:100',
             'price' => 'required',
+            'description' => 'required|min:20|max:2000',
             'series' => 'required'
         ];
 
