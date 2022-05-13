@@ -73,9 +73,19 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $this->validationRules = [
+            'title' => 'required|min:5|max:100'
+        ];
+
+        $request->validate($this->validationRules);
+
+        $formData = $request->all();
+
+        $comic->update($formData);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

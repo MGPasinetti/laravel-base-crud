@@ -7,3 +7,5 @@ BONUS: creare il seeder per la tabella comics utilizzando il file in allegato.
 Ciao ragazzi, oggi lavorate sulla stessa repo di lunedì (laravel-base-crud) e aggiungete l'azione di creazione di una nuova risorsa al sito (la C in CRUD: create). Nel frattempo continuate anche a lavorare al front-end del sito.
 
 Ciao ragazzi, oggi lavorate sulla stessa repo laravel-base-crud e aggiungete l'azione di update e di delete delle risorse (la U e la D in CRUD), implementando anche la validazione dei dati.
+
+BONUS: tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
