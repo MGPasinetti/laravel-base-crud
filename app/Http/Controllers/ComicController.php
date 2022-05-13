@@ -76,7 +76,9 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $this->validationRules = [
-            'title' => 'required|min:5|max:100'
+            'title' => 'required|min:5|max:100',
+            'price' => 'required',
+            'series' => 'required'
         ];
 
         $request->validate($this->validationRules);
