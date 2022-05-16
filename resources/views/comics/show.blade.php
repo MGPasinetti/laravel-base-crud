@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $comic->title }}</title>
+@extends('templates.base')
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
+@section('pageTitle', $pageTitle)
+
+@section('pageMain')
     <div class="container">
         <div class="row g-4">
             <div class="col-8">
@@ -22,5 +16,6 @@
         </div>
         <a href="{{ url()->previous() }}">Back</a>
     </div>
-</body>
-</html>
+@endsection
+
+

@@ -17,15 +17,15 @@ class Comic extends Model
         'type',
     ];
 
-    private $validationRules = [
-        'title' => 'required|min:5|max:100',
-        'price' => 'required',
-        'description' => 'required|min:20|max:2000',
-        'series' => 'required'
-    ];
+    // private $validationRules = [
+    //     'title' => 'required|min:5|max:100',
+    //     'price' => 'required',
+    //     'description' => 'required|min:20|max:2000',
+    //     'series' => 'required'
+    // ];
 
-    public function getValidationRules() {
-        return $this->validationRules;
-    }
+    // public function __construct(array $validationRules) {
+    //     $this->validationRules = $validationRules;
+    // }
 }
 
