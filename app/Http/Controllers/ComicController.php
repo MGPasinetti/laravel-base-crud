@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comic;
+use Illuminate\Validation\Rule;
+
 
 class ComicController extends Controller
 {
+    private $validationRules = [
+        'title' => 'required|min:5|max:100',
+        'price' => 'required',
+        'description' => 'required|min:20|max:2000',
+        'series' => 'required'
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -78,11 +87,11 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $this->validationRules = [
-            'title' => 'required|min:5|max:100',
-            'price' => 'required',
-            'description' => 'required|min:20|max:2000',
-            'series' => 'required'
+        $this->validationRules['title'] = [
+            'required',
+            Rule::unique('comics')->ignore($comic),
+            'min:5',
+            'max:100'
         ];
 
         $request->validate($this->validationRules);
