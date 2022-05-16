@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Comic</title>
+@extends('templates.base')
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
+@section('pageTitle', 'Create new comics listing')
+
+@section('pageMain')
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,10 +11,10 @@
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Thumb</label>
                         <input type="text" class="form-control" id="thumb" name="thumb">
-                      </div>
+                    </div>
                     <div class="mb-3">
-                      <label for="title" class="form-label">Title</label>
-                      <input type="text" class="form-control" id="title" name="title">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title">
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
@@ -48,5 +42,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@endsection
